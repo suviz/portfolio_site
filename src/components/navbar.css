@@ -1,9 +1,53 @@
-
 .navbar {
     width: 100vw;
     height: 60px;
-    background-color: rgb(255, 255, 255);
-    opacity: 40%;
+    background-color: rgb(255, 255, 255, .6);
     position: fixed;
     top: 0;
+    backdrop-filter: blur(10);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 60px;
+    padding-left: 40px;
+}
+
+.icon-a {
+    position: relative;
+    height: 2rem; 
+ }
+
+.icon {
+    height: 100%;
+    position: absolute;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    gap: 20px;
+    padding-right: 40px;
+
+}
+
+.nav-link, .nav-link:visited {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: large;
+}
+
+.nav-link:hover {
+    color: rgb(126, 0, 164);
+}
+

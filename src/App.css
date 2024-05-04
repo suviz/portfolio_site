@@ -26,3 +26,32 @@ header {
   min-width: 100vw;
   min-height: 100vh;
 }
+
+main {
+  margin-top: 100px;
+  white-space: normal;
+  
+}
+
+.hero {
+  width: 100vw;
+  height: 500px;
+}
+
+.buttons {
+
+  width: 100vw;
+  height: 500px;
+}
+
+.projects {
+
+  width: 100vw;
+  height: 500px;
+}
+
+.contact {
+
+  width: 100vw;
+  height: 500px;
+}

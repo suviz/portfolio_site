@@ -16,19 +16,22 @@ function App() {
             Moikkuli!
           </h1>
 
-          <p>Description</p>
+          <p className='hero-desc'>Description</p>
 
           <div className='buttons'>
-            <p>Buttons</p>
+            <a href="/about" className='button'>About me</a>
+            <a href="#projects" className='button'>Projects</a>
+            <a href="#contact" className='button'>Contact</a>
+            
           </div>
         </div>
 
   
-        <div className='projects'>
+        <div className='projects' id="projects">
           <h2>Projects</h2>
         </div>
 
-        <div className='contact'>
+        <div className='contact' id="contact">
           <h2>Contact me</h2>
         </div>
 

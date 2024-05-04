@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App background">
 
-      <header className="" >
+      <header>
         <NavBar/>
       </header>
 

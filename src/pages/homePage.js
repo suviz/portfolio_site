@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 function HomePage() {
     return (
@@ -12,10 +13,9 @@ function HomePage() {
             <p className='hero-desc'>Description</p>
   
             <div className='buttons'>
-              <a href="/about" className='button'>About me</a>
-              <a href="#projects" className='button'>Projects</a>
-              <a href="#contact" className='button'>Contact</a>
-              
+                <Link to="/about" className='button'>About me</Link>
+                <Link to="#projects" className='button'>Projects</Link>
+                <Link to="#contact" className='button'>Contact</Link>
             </div>
           </div>
   

@@ -8,8 +8,8 @@ export default function NavBar() {
   return (
     <div className='navbar'>
       
-      <div className='logo'>
-        Suvi Zitting
+      <div>
+        <Link to="/" className='logo'>Suvi Zitting </Link>
       </div>
 
       <div className='links'>

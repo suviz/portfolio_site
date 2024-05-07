@@ -8,6 +8,13 @@ export default function NavBar() {
   return (
     <div className='navbar'>
 
+      <div className='links'>
+        <Link to="/" className='nav-link'>Home </Link>
+        <Link to="/about" className='nav-link'>About me</Link>
+      </div>
+
+      <span className='separator'></span>
+
       <div className='icons'>
 
         <Link to="//www.github.com/suviz" className='icon-link'> 
@@ -18,11 +25,6 @@ export default function NavBar() {
           <img src={linkedin} alt="linkedin" className='icon'></img>
         </Link>
 
-      </div>
-
-      <div className='links'>
-        <Link to="/" className='nav-link'>Home </Link>
-        <Link to="/about" className='nav-link'>About me</Link>
       </div>
 
       

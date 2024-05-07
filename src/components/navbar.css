@@ -8,7 +8,7 @@
 
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -16,9 +16,9 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: flex-start;
-    gap: 60px;
-    padding-left: 40px;
+    justify-content: flex-end;
+    gap: 40px;
+    padding: 0 40px 0 40px;
 }
 
 .icon-link {
@@ -28,7 +28,6 @@
 
 .icon {
     height: 100%;
-    position: absolute;
 }
 
 .links {
@@ -36,7 +35,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-end;
-    gap: 20px;
+    gap: 40px;
     padding-right: 40px;
 
 }
@@ -49,5 +48,13 @@
 
 .nav-link:hover {
     color: rgb(126, 0, 164);
+}
+
+.separator {
+    height: 20px;
+    width: 1px;
+    background-color: #797979;
+    border-radius: 99px;
+    margin: 0;
 }
 

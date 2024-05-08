@@ -35,18 +35,8 @@ main {
   height: 100%;
   white-space: normal;
   max-width: 800px;
-  overflow:hidden;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-}
-
-.hero {
-  width: 100%;
-  min-height: 300px;
-  padding: 100px 0 0 0;
-}
-
-.hero-desc {
-  margin: 2rem 0;
 }

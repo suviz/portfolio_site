@@ -1,0 +1,9 @@
+.hero {
+    width: 100%;
+    min-height: 300px;
+    padding: 100px 0 0 0;
+}
+  
+.hero-desc {
+    margin: 2rem 0;
+}

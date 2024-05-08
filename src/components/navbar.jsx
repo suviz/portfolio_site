@@ -8,35 +8,33 @@ export default function NavBar() {
   return (
     <div className='navbar'>
       
-      <div>
-        <Link to="/" className='logo'>Suvi Zitting </Link>
+      <div className='nav-logo-div'>
+        <Link to="/" className='nav-logo'>Suvi Zitting </Link>
       </div>
 
-      <div className='links'>
+      <div className='nav-text-links'>
 
-        <div className='nav-links'>
-          <Link to="/" className='nav-link'>Home </Link>
-          <Link to="/about" className='nav-link'>About me</Link>
+        <div className='nav-textlinks'>
+          <Link to="/" className='nav-textlink'>Home </Link>
+          <Link to="/about" className='nav-textlink'>About</Link>
         </div>
 
-        <span className='separator'></span>
+        <span className='nav-separator'></span>
 
-        <div className='icons'>
+        <div className='nav-image-links'>
 
-          <Link to="//www.github.com/suviz" className='icon-link'> 
-            <img src={github} alt="github" className='icon'></img>
+          <Link to="//www.github.com/suviz" className='nav-image-link'> 
+            <img src={github} alt="github" className='nav-image'></img>
           </Link>
 
-          <Link to="//www.linkedin.com/in/suvi-zitting-84719723a" className='icon-link'>
-            <img src={linkedin} alt="linkedin" className='icon'></img>
+          <Link to="//www.linkedin.com/in/suvi-zitting-84719723a" className='nav-image-link'>
+            <img src={linkedin} alt="linkedin" className='nav-image'></img>
           </Link>
 
         </div>
 
       </div>
-      
 
-      
     </div>
   );
 }

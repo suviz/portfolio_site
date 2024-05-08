@@ -12,10 +12,16 @@ function App() {
         <NavBar/>
       </header>
 
-      <Routes>
-        <Route path="/" element={ <HomePage /> } />
-        <Route path="/about" element={ <AboutPage /> } />
-      </Routes>
+      <main>
+        <div className='main-content'>
+          <Routes>
+            <Route path="/" element={ <HomePage /> } />
+            <Route path="/about" element={ <AboutPage /> } />
+          </Routes>
+        </div>
+        
+      </main>
+      
 
     
     </div>

@@ -22,14 +22,13 @@
 
 .button {
     background-color: rgb(256, 256, 256, .3);
-    border: none;
     color: rgb(0, 0, 0);
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    border: 2px solid #000000;
+    font-size: 18px;
+    border: 1px solid #000000;
     border-radius: 8px;
 }
 
@@ -47,39 +46,17 @@
     width: 100%;
 }
 
+/* Extra large devices (2600px and up) */
+@media only screen and (min-width: 2600px) {
 
-/* 
-TODO --->
-*/
-
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-
-
+    .button {
+        font-size: 250%;
+        padding: 30px 60px;
+        border-radius: 16px;        
+    }
+    .buttons{
+        gap: 20px;
+        padding: 40px 0;
+    }
   
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-
-
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-
-
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
-
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-
-
 }

@@ -1,6 +1,10 @@
 import ReactCardFlip from 'react-card-flip';
 
-export default function CapyCard({isFlipped, handleClick, frontImage, frontAlt, backImage, BackAlt}) {
+export default function CapyCard({isFlipped, setIsFlipped, frontImage, frontAlt, backImage, BackAlt}) {
+
+    const handleClick = () => {
+        setIsFlipped(!isFlipped);
+    };
 
     return (
         <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">

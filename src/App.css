@@ -122,5 +122,9 @@ main {
   p {
     font-size: 48px;
   }
+
+  .main-content {
+    padding: 300px 0;
+  }
   
 }

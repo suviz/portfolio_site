@@ -32,7 +32,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .nav-image-links {
@@ -104,3 +103,41 @@
     }
   
 }
+
+/* Extra large devices (2600px and up) */
+@media only screen and (min-width: 2600px) {
+
+    .navbar {
+        height: 120px;
+    }
+
+    .nav-logo {
+        padding-left: 40px;
+        font-size: xx-large;
+    }
+    
+    .nav-image-link {
+        height: 4rem; 
+    }
+    .nav-image-links {
+        gap: 80px;
+        padding: 0 80px 0 80px;
+        
+    }
+
+    .nav-textlinks {
+        gap: 80px;
+        padding-right: 80px;
+    
+    }
+    .nav-textlink {
+        font-size: xx-large;
+    }
+
+    .nav-separator {
+        height: 40px;
+        width: 2px;
+    }
+    
+} 
+  

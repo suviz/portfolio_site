@@ -2,9 +2,29 @@
 .capy-card {
     height: 200px;
     width: 200px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    cursor: pointer;
 }
 
-.capy-img {
-    height: 100%;
+.frontside, .backside {
     width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.frontside {
+    transform: rotateY(180deg);
+}
+
+.capy-card:active {
+    transform: scale(0.95);
+    transition: transform 1s;
+}
+
+.capy-card.flipped {
+    transform: rotateY(180deg);
 }

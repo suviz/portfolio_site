@@ -1,4 +1,4 @@
-import CapybaraGame from "../components/capyGame";
+import CapyGame from "../components/capyGame";
 
 function CapybaraPage() {
   return (
@@ -6,11 +6,11 @@ function CapybaraPage() {
       <div className="capy-page">
 
         <div className="capy-title">
-          <h2>Match the capybara!</h2>
+          <h2>Match the capybaras!</h2>
         </div>
 
         <div className="capy-game">
-          <CapybaraGame/>
+          <CapyGame/>
         </div>
         
 

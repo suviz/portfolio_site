@@ -1,6 +1,38 @@
 
+.capy-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.game-title {
+    text-align: center;
+}
+
 .capy-grid {
     display: grid;
     gap: 10px;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: max-content max-content max-content max-content;
+}
+
+
+/* Extra small devices (800px and down) */
+@media only screen and (max-width: 800px) {
+
+    .capy-grid {
+        grid-template-columns: max-content max-content max-content;
+    }
+
+}
+/* Extra large devices (2600px and up) */
+@media only screen and (min-width: 2600px) {
+
+    .capy-game {
+        width: 50vw;
+    }
+
+    .capy-grid {
+        gap: 20px;
+    }
+
 }

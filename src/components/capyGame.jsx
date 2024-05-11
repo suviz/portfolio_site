@@ -101,6 +101,9 @@ export default function CapyGame() {
 
   return (
     <section>
+
+      <h2>{!isWon ? "Match the capybaras!" : "Capy Slay 💅 🦫"}</h2>
+
       <div className="capy-grid">
         {cards?.map((card) => (
             <CapyCard

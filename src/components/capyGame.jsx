@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Confetti from 'react-confetti'
 import CapyCard from './capyCard';
 import './capyGame.css';
@@ -10,6 +10,31 @@ import happy from '../pictures/capybara/happy.png';
 import hungry from '../pictures/capybara/hungry.png';
 import slay from '../pictures/capybara/slay.png';
 import mad from '../pictures/capybara/mad.png';
+
+export function useScreenSize() {
+  const [screenSize, setScreenSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  return screenSize;
+};
 
 const cards = [
   { id: 0, name: "king", img: king },
@@ -34,9 +59,11 @@ function shuffle(array){
 }
 
 export const cardsShuffled = shuffle(cards);
-export const { confettiWidth, confettiHeight } = 100;
 
 export default function CapyGame() {
+
+  // Screen size for winning confetti dimensions
+  const screenSize = useScreenSize();
 
   // States for cards array, first card clicked, second click status and waiting mode status
   const [cards, setCards] = useState(cardsShuffled);
@@ -118,8 +145,8 @@ export default function CapyGame() {
       </div>
 
     {isWon  ? <Confetti
-                width={confettiWidth}
-                height={confettiHeight}
+                width={screenSize.width}
+                height={screenSize.height}
                 numberOfPieces={1000}
               /> 
             : ""}

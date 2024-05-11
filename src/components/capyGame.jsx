@@ -74,17 +74,18 @@ export default function CapyGame() {
   const [isWon, setIsWon] = useState(false);
 
   function handleClick(e, clickedCard) {
-    // Ignore clicks if in waiting more
-    if (waiting) {return;} 
+    // Ignore clicks if in waiting more or clicked card is already found
+    if (waiting || clickedCard.found) {return;} 
 
-    // If first click
-    if (!secondClick) { 
+    if (!secondClick) { // If first click
       setFirstCard(clickedCard);
-      changeCardStatus(clickedCard);
+      flipCard(clickedCard);
       setSecondClick(true);
-    } else { 
-      // If second click
-      changeCardStatus(clickedCard);
+    } else { // If second click
+      // Flip only if card is not the same as first clicked-one
+      if(clickedCard.id != firstCard.id){
+        flipCard(clickedCard);
+      }
       checkCard(clickedCard);
       setFirstCard(null);
       setSecondClick(false);
@@ -92,28 +93,36 @@ export default function CapyGame() {
   };
 
   function checkCard(card) {
-    // If card matches with the already clicked-one, change statuses to found (cards stay flipped) & update cardsLeft and isWon
-    if (card.name === firstCard.name) {
+    if((card.id === firstCard.id)){ // If card is the same as the first clicked-one
+      // Flip card back after timeout
+      setWaiting(true);
+      setTimeout(() => {
+        flipCard(card);
+        setWaiting(false);
+      }, 200);
+    } else if (card.name === firstCard.name) { // If card matches with the first clicked-one
+      // Change statuses to found (-> cards stay flipped) & update cardsLeft and isWon
+      console.log("WON ??");
       card["found"] = true;
       firstCard["found"] = true;
-      changeCardStatus(card);
-      changeCardStatus(firstCard);
+      flipCard(card);
+      flipCard(firstCard);
       if(cardsLeft <= 2){
         setIsWon(true);
       }
       setCardsLeft(cardsLeft - 2);      
-    } else {
-      // Else wait timeout and then change statuses (cards remain unfound & are flipped back)
+    } else { // If cards don't match
+      // Wait timeout and then change statuses (cards remain unfound & are flipped back)
       setWaiting(true);
       setTimeout(() => {
-        changeCardStatus(card);
-        changeCardStatus(firstCard);
+        flipCard(card);
+        flipCard(firstCard);
         setWaiting(false);
       }, 1000);
     }
   };
 
-  function changeCardStatus(clickedCard) {
+  function flipCard(clickedCard) {
     // Flip card if it hasn't been found yet
     if (!clickedCard.found) { 
       clickedCard.isFlipped = !clickedCard.isFlipped;
@@ -130,7 +139,7 @@ export default function CapyGame() {
     <section className='capy-game'>
 
       <div className='game-title'>
-        <h1>{!isWon ? "Match the capybaras!" : "Capy Slay 💅 🦫"}</h1>
+        <h1>{!isWon ? "Match the capybaras 🦫" : "Capy Slay 💅 🦫"}</h1>
       </div>
 
       <div className="capy-grid">

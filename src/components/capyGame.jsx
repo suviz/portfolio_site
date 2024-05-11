@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useState } from "react";
+import Confetti from 'react-confetti'
 import CapyCard from './capyCard';
 import './capyGame.css';
 
@@ -33,6 +34,7 @@ function shuffle(array){
 }
 
 export const cardsShuffled = shuffle(cards);
+export const { confettiWidth, confettiHeight } = 100;
 
 export default function CapyGame() {
 
@@ -40,7 +42,9 @@ export default function CapyGame() {
   const [cards, setCards] = useState(cardsShuffled);
   const [firstCard, setFirstCard] = useState(null);
   const [secondClick, setSecondClick] = useState(false);
+  const [cardsLeft, setCardsLeft] = useState(cardsShuffled.length);
   const [waiting, setWaiting] = useState(false);
+  const [isWon, setIsWon] = useState(false);
 
   function handleClick(e, clickedCard) {
     // Ignore clicks if in waiting more
@@ -61,12 +65,16 @@ export default function CapyGame() {
   };
 
   function checkCard(card) {
-    // If card is first or matches with the already clicked-one, change statuses to found (cards stay flipped)
+    // If card matches with the already clicked-one, change statuses to found (cards stay flipped) & update cardsLeft and isWon
     if (card.name === firstCard.name) {
       card["found"] = true;
       firstCard["found"] = true;
       changeCardStatus(card);
       changeCardStatus(firstCard);
+      if(cardsLeft <= 2){
+        setIsWon(true);
+      }
+      setCardsLeft(cardsLeft - 2);      
     } else {
       // Else wait timeout and then change statuses (cards remain unfound & are flipped back)
       setWaiting(true);
@@ -92,15 +100,25 @@ export default function CapyGame() {
   };
 
   return (
-    <section className="capy-grid">
-      {cards?.map((card) => (
-          <CapyCard
-            key={card.id}
-            card={card}
-            onClick={(e) => handleClick(e, card)}
-          />
-        )
-      )}
+    <section>
+      <div className="capy-grid">
+        {cards?.map((card) => (
+            <CapyCard
+              key={card.id}
+              card={card}
+              onClick={(e) => handleClick(e, card)}
+            />
+          )
+        )}
+      </div>
+
+    {isWon  ? <Confetti
+                width={confettiWidth}
+                height={confettiHeight}
+                numberOfPieces={1000}
+              /> 
+            : ""}
+
     </section>
   );
 }

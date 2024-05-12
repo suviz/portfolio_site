@@ -1,4 +1,4 @@
-import CapyGame from "../components/capyGame";
+import CapyGame from "../components/capygame/capyGame";
 
 function CapybaraPage() {
   return (

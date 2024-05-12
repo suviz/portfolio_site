@@ -1,4 +1,4 @@
-import frontside from '../pictures/capybara/questionmark.png';
+import frontside from '../../pictures/capybara/questionmark.png';
 import './capyCard.css';
 
 export default function CapyCard({ card, onClick }) {

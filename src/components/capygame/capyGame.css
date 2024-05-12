@@ -9,12 +9,15 @@
     text-align: center;
 }
 
-.capy-grid {
+.game-grid {
     display: grid;
     gap: 10px;
     grid-template-columns: max-content max-content max-content max-content;
 }
 
+.game-restart {
+    padding: 50px;
+}
 
 /* Extra small devices (800px and down) */
 @media only screen and (max-width: 800px) {

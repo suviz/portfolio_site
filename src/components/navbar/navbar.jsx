@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './navbar.css';
-import github from '../pictures/github.png';
-import linkedin from '../pictures/linkedin.png';
+import github from '../../pictures/github.png';
+import linkedin from '../../pictures/linkedin.png';
 import { Link } from 'react-router-dom';
 
 export default function NavBar() {

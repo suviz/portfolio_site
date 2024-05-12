@@ -72,6 +72,11 @@
     color: rgb(126, 0, 164);
 }
 
+.nav-textlink.active {
+    color: rgb(126, 0, 164);
+    text-decoration: underline;
+}
+
 .nav-separator {
     height: 20px;
     width: 1px;

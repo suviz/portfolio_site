@@ -125,6 +125,11 @@ export default function CapyGame() {
     }, 100);
   }
 
+  // Start the game when page is loaded
+  useEffect(() => { 
+    newGame(); 
+  }, []); 
+
   return (
     <section className='capy-game'>
       {isWon  ? <Confetti

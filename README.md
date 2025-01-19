@@ -1,24 +1,5 @@
 # CS-C1180 - Verkkojulkaisemisen perusteet: Loppuprojekti
 
-## Työnjako
-
-Tein projektin yksin, sillä käyn kurssia sivuaineeseeni, enkä suorita Viestintä ja digitaalinen media -kurssia.
-Tämän takia keskityin projektissa sisällön sijasta juuri tekniseen toteutukseen.
-
-## Työtunnit
-
-Kokonaisuudessaan projektiin on tähän mennessä uponnut n. 48-50 tuntia.
-
-## Työstä hieman tarkemmin
-
-Tarkoituksenani oli kokeilla tehdä omat portfoliosivut uudestaan, aiemmista yrityksistä nyt hieman oppineena.
-Kesken koodauksen tajusin, että haluaisin sittenkin hieman muuttaa etusivua, ja jouduin keksimään uuden idean täyttääkseni interaktiivisuuden ja ulkoisen komponentin käytön vaatimukset.
-Keksin lopulta toteuttaa pienen pelin, jonka tein aika lennosta, joten siitä ei tämän takia ole figmassa suunnitelmaa. Se olikin lopulta hauskin ja opettavaisin osa toteuttaa koko projektissa.
-
-Kuten aikasemminkin, kesken projektin alkoi tulla uusia ja parempia ideoita, joten kurssin jälkeen sivut menevät varmaan taas uusiksi. Teen silloin sitten sisällönkin viimein valmiiksi. Mutta nyt tämän kurssin ja kahden yrityksen jälkeen prosessi alkaa jo olla aika tuttu ja menee varmaankin aika nopeasti ja rutiinilla. Ehkä kolmas kerta toden sanoo :D
-
-Kommenttina vielä: ajattelin, että jossain olisi ollut tarkemmat kysymykset mihin tässä piti vastata, mutta en löytänyt mitään tarkkaa listaa tai kysymyksiä. Joten toivottavasti tämä riittää!
- 
 ## Osoite
 
 Sivut pyörivät osoitteessa https://suvizitting.vercel.app/
